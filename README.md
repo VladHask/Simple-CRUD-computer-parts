@@ -1,5 +1,7 @@
 Computer parts
 
 Для запуска:
-data.sql - заполнение
+data.sql - заполнение 
+
+
 table.sql - таблица
