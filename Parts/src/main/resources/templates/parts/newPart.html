@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="default">
+
+<head>
+    <title th:text="${'New Item'}"></title>
+</head>
+
+<body>
+
+<div layout:fragment="content" class="py-5">
+    <div class="container">
+
+            <div class="col-4">
+                <hr/>
+                <form th:replace="fragments/forms :: part(${part}, 'new')"></form>
+            </div>
+
+    </div>
+</div>
+
+</body>
+</html>

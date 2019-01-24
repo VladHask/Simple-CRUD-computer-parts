@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title>main</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+
+    <link layout:fragment="pageStyleLink"/>
+    <style layout:fragment="pageStyle"></style>
+</head>
+<body class="app">
+
+
+        <nav class="navbar navbar-expand fixed-top navbar-light bg-white">
+            <span class="navbar-brand mb-0 h1">Computer parts</span>
+
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-item nav-link" th:href="@{'/'}">Main</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item nav-link" th:href="@{'/parts'}">List Of Items</a>
+                    </li>
+                    <th:block layout:fragment="newPart"></th:block>
+                </ul>
+                <th:block layout:fragment="actionPart"></th:block>
+
+                    <form th:replace="fragments/filters :: search('')"></form>
+        </nav>
+
+    <main role="main" class="app-content">
+        <th:block layout:fragment="pageHead"></th:block>
+        <th:block layout:fragment="content"></th:block>
+    </main>
+
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    background-color:    gray() ; //background color of buttons. Blue by default
+border-color:        gray() ; // color or borders. Also blue by default
+color:               white; // text color of buttons which is white by default
+cursor:pointer;
+    z-index:2;
+}

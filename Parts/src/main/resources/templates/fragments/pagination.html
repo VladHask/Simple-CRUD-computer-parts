@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="ru"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<nav th:fragment="pagination (pages)">
+    <ul class="pagination my-0 pagination pagination-lg justify-content-center ">
+        <li class="page-item bg-dark" th:classappend="${pages.hasPrevious()?'':'disabled'}">
+            <a class="page-link bg-dark" th:href="@{/parts}" aria-label="Previous">
+                <span aria-hidden="false">Previous</span>
+            </a>
+        </li>
+        <li class="page-item bg-dark" th:each="i : ${#numbers.sequence(1, pages.getTotalPages())}" th:classappend="${(i == pages.getNumber()+1)?'active':''}">
+            <a class="page-link" th:href="@{/parts(page=${i})}" th:text="${i}"></a>
+        </li>
+        <li class="page-item bg-dark" th:classappend="${pages.hasNext()?'':'disabled'}">
+            <a class="page-link bg-dark" th:href="@{/parts(page=${pages.getTotalPages()})}" aria-label="Next">
+                <span aria-hidden="false">Next</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+<div th:fragment="free"></div>
+</body>
+</html>
