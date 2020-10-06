@@ -6,4 +6,4 @@ data.sql - заполнение
 
 table.sql - таблица
 
-простое CRUD приложение spring boot
+простое CRUD приложение spring boot/thymeleaf/mysql
